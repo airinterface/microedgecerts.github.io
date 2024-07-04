@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import {translate} from '@docusaurus/Translate';
 
 const organizationName = "MicroEdgeCerts";
 const projectName = "microedgecerts.github.io";
@@ -76,7 +77,7 @@ const config: Config = {
   ],
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/MECHero.jpg',
     navbar: {
       title: 'MicroEdgeCerts',
       logo: {
@@ -84,7 +85,7 @@ const config: Config = {
         src: 'img/card.jpg',
       },
       items: [
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog/summary', label: 'Blog', position: 'left'},
          
         {
           type: 'docSidebar',
@@ -120,11 +121,11 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Works',
           items: [
             {
-              label: 'Get Started',
-              to: '/docs/intro',
+              label: 'TechnicalSummary',
+              to: '/blog',
             },
           ],
         },
@@ -154,7 +155,7 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/MicroEdgeCerts',
             },
           ],
         },

@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-
+import Translate from '@docusaurus/Translate';
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -15,7 +15,11 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className={`${styles.subtitle} hero__subtitle`}>
+          <Translate id="home.subtitle" description="the hero subtitle">
+            This header will be translated
+          </Translate>
+        </p>
       </div>
     </header>
   );
@@ -25,8 +29,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title}`}
+      description="Open Badge for Learners.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
